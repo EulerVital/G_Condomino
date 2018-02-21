@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G_Condomino", "G_Condomino\G_Condomino.csproj", "{223B8BDF-BBA5-476A-9EE6-EE6FB3BA56C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{9A9C5754-E340-46EF-9296-264CC0E2BC8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NEG", "NEG\NEG.csproj", "{F51BD6BA-9558-4E20-AADD-7B0603F7B1A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{223B8BDF-BBA5-476A-9EE6-EE6FB3BA56C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{223B8BDF-BBA5-476A-9EE6-EE6FB3BA56C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{223B8BDF-BBA5-476A-9EE6-EE6FB3BA56C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9C5754-E340-46EF-9296-264CC0E2BC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9C5754-E340-46EF-9296-264CC0E2BC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9C5754-E340-46EF-9296-264CC0E2BC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9C5754-E340-46EF-9296-264CC0E2BC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F51BD6BA-9558-4E20-AADD-7B0603F7B1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51BD6BA-9558-4E20-AADD-7B0603F7B1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F51BD6BA-9558-4E20-AADD-7B0603F7B1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F51BD6BA-9558-4E20-AADD-7B0603F7B1A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
