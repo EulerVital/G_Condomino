@@ -9,33 +9,33 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class dEstado : DBase.DBase
+    public class dCidade : DBase.DBase
     {
         #region Atributos
         IDataReader dr = null;
         SqlParameter[] param = null;
         #endregion
 
-        public List<Estado> Estado_GET(Estado obj)
+        public List<Cidade> Cidade_GET(Cidade obj)
         {
-            List<Estado> retorno = new List<Estado>();
+            List<Cidade> retorno = new List<Cidade>();
             cmd = new SqlCommand();
             param = new SqlParameter[3];
 
             try
             {
 
-                MontarParametro(0, param, ParameterDirection.Input, "@EstadoID", obj.EstadoID, SqlDbType.Int);
-                MontarParametro(1, param, ParameterDirection.Input, "@PaisID", null, SqlDbType.Int);
+                MontarParametro(0, param, ParameterDirection.Input, "@CidadeID", obj.CidadeID, SqlDbType.Int);
+                MontarParametro(1, param, ParameterDirection.Input, "@EstadoID", obj.Estado.EstadoID, SqlDbType.Int);
                 MontarParametro(2, param, ParameterDirection.Input, "@Nome", obj.Nome, SqlDbType.VarChar);
 
-                dr = ExecReader("USP_ESTADO_GET", cmd, param);
+                dr = ExecReader("USP_CIDADE_GET", cmd, param);
 
                 if (dr != null)
                 {
                     while (dr.Read())
                     {
-                        retorno.Add(Estado(dr));
+                        retorno.Add(Cidade(dr));
                     }
                 }
 
@@ -52,16 +52,17 @@ namespace DAO
             finally { CloseConnection(); }
         }
 
-        private Estado Estado(IDataReader dr)
+        private Cidade Cidade(IDataReader dr)
         {
-            Estado obj = new Estado();
+            Cidade obj = new Cidade();
 
             try
             {
-                obj.EstadoID = GetInt32("Id", dr).ToString();
+                obj.CidadeID = GetInt32("Id", dr).ToString();
                 obj.Nome = GetString("NomeEstado", dr);
-                obj.UF = GetString("UF", dr);
-                obj.Pais = GetString("NomePais", dr);
+                obj.Estado.EstadoID = GetInt32("EstadoID", dr).ToString();
+                obj.Estado.Nome = GetString("Nome", dr);
+                obj.Estado.UF = GetString("UF", dr);
 
                 return obj;
             }

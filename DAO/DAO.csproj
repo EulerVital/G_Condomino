@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dCidade.cs" />
+    <Compile Include="dCondominio.cs" />
+    <Compile Include="dEndereco.cs" />
     <Compile Include="dEstado.cs" />
     <Compile Include="DBase\DBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -16,14 +16,19 @@ namespace G_Condomino.Models
         [Key]
         public string CondominioID { get; set; }
 
-        [Display(Name = "Nome do Condominio: ")]
+        [Display(Name = "Nome do Condominio: *")]
         [Required]
         public string Nome { get; set; }
         public Endereco Endereco { get; set; }
 
-        [Display(Name = "Tipo Condômino: ")]
+        [Display(Name = "Tipo Condômino: *")]
         [Required]
         public string TipoCondominio { get; set; }
-        public string Excluido { get; set; }
+
+        [Display(Name = "Descricação Geral: ")]
+        [DataType(DataType.MultilineText)]
+        public string Descricao { get; set; }
+
+        public bool Excluido { get; set; }
     }
 }
